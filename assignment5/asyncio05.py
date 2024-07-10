@@ -6,8 +6,8 @@ async def rice():
     # Simulate cooking time
     cook_time = 1 + random()
     await asyncio.sleep(cook_time)
-    print(f'(Rice) : cooking {cook_time} seconds.....')
-    return f'Rice is  : completed' 
+    print(f'(Rice) : cooking {cook_time}   seconds.....')
+    return f'Rice : Finished cooking in {cook_time} seconds)'
 
 # Coroutine to prepare noodle
 async def noodle():
@@ -15,15 +15,15 @@ async def noodle():
     cook_time = 1 + random()
     await asyncio.sleep(cook_time)
     print(f'(Noodle) : cooking {cook_time} seconds.....')
-    return f'Noodle is  : completed' 
+    return f'Noodle : Finished cooking in {cook_time} seconds)'
 
 # Coroutine to prepare curry
 async def curry():
     # Simulate cooking time
     cook_time = 1 + random()
     await asyncio.sleep(cook_time)
-    print(f'(Curry) : cooking {cook_time} seconds......')
-    return f'Curry is  : completed' 
+    print(f'(Curry) : cooking {cook_time}  seconds......')
+    return f'Curry : Finished cooking in {cook_time} seconds)'
 
 # Main coroutine
 async def main():
