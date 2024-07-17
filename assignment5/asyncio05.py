@@ -38,7 +38,6 @@ async def main():
     done, pending = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
     
     # Wait for all tasks to complete
-    await asyncio.gather(*tasks)
 
     # Get the first completed task
     first_completed_task = done.pop()
