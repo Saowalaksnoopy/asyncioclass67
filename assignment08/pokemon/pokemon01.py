@@ -6,7 +6,7 @@ from pypokemon.pokemon import Pokemon
 def get_pokemon(url):
     print(f"{time.ctime()} - get {url}")
     resp = requests.get(url)
-    pokemon = resp.json()
+    pokemon = resp.json() 
 
     return pokemon
 
@@ -17,9 +17,9 @@ def get_pokemons():
 
     pokemon_data = []
     for number in rand_list:
-        url = f'https://pokeapi.co/api/v2/pokemon/{number}'
+        url = f'https://pokeapi.co/api/v2/pokemon/{number}' #สร้าง url 5 ตัว
         pokemon_json = get_pokemon(url)
-        pokemon_object = Pokemon(pokemon_json)
+        pokemon_object = Pokemon(pokemon_json) #ส่งค่า pokemon_json ใน pokemon_object
         pokemon_data.append(pokemon_object)
     return pokemon_data
 

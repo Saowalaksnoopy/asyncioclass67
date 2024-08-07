@@ -5,7 +5,7 @@ import random
 from pypokemon.pokemon import Pokemon
 
 async def main():
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient() as client: # ได้ object client มา 
         rand_list=[]
         pokemon_data = []
         for i in range(5):
