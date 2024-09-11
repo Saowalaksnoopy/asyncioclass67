@@ -81,7 +81,7 @@ async def main():
     customers_start_time = time.perf_counter()
     customer_producer = asyncio.create_task(customer_generation(customer_queue, 20))
     cashiers = [checkout_customer(customer_queue, i) for i in range(5)]
-
+ 
     await asyncio.gather(customer_producer, *cashiers)
     print(f"The supermarket process finished "
           f"{customer_producer.result()} customers "
